@@ -1,3 +1,24 @@
 
-<h1>Home</h1>
+
+		<form action="?" method="get">
+			<input type="text" name="q" placeholder="Search Instagram photos..." autofocus/>
+		</form>
+
+
+<% @results.each do |instagram| %>
+	
+	<% if instagram.caption %>
+		<% caption = instagram.caption.text %>
+		<%= instagram.user.username %>
+		<%= caption %>
+	<% end %>
+	<li>
+		<a href="<%= instagram.link %>" data-largesrc="<%= instagram.images.standard_resolution.url %>" data-title="@<%= instagram.user.username %>" data-description="<%= caption %>">
+			<%= image_tag instagram.images.low_resolution.url %>
+		</a>
+	</li>
+
+<% end %>
+
+
 

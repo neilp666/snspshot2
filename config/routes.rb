@@ -1,7 +1,9 @@
 Snapshot2::Application.routes.draw do
+  get 'about' => 'search#about'
+
   root 'search#Home'
 
-  get 'about' => 'search#about'
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
