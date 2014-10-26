@@ -4,21 +4,21 @@
 			<input type="text" name="q" placeholder="Search Instagram photos..." autofocus/>
 		</form>
 
+		<div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Welcome //
+                    <small>It's Nice to Meet You!</small>
+                </h1>
+     </div>
 
-<% @results.each do |instagram| %>
-	
-	<% if instagram.caption %>
-		<% caption = instagram.caption.text %>
-		<%= instagram.user.username %>
-		<%= caption %>
-	<% end %>
-	<li>
-		<a href="<%= instagram.link %>" data-largesrc="<%= instagram.images.standard_resolution.url %>" data-title="@<%= instagram.user.username %>" data-description="<%= caption %>">
+		<div class="row">
+		<% @results.each do |instagram| %>
+			<div class="col-md-3">
 			<%= image_tag instagram.images.low_resolution.url %>
-		</a>
-	</li>
+			</div>
+			<% end %>
+		</div>
 
-<% end %>
 
 
 
