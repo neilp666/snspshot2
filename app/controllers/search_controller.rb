@@ -12,7 +12,7 @@ class SearchController < ApplicationController
     end
 
     @tag = @tag.first.name
-    @results = client.tag_recent_media(@tag)
+    @search = client.tag_recent_media(@tag)
   end
 
   def about

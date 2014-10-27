@@ -1,8 +1,6 @@
 
 
-		<form action="?" method="get">
-			<input type="text" name="q" placeholder="Search Instagram photos..." autofocus/>
-		</form>
+		
 
 		<div class="row">
             <div class="col-lg-12">
@@ -12,12 +10,14 @@
      </div>
 
 		<div class="row">
-		<% @results.each do |instagram| %>
+		<% @search.each do |instagram| %>
 			<div class="col-md-3">
 			<%= image_tag instagram.images.low_resolution.url %>
 			</div>
+			
 			<% end %>
 		</div>
+		
 
 
 

@@ -12,6 +12,7 @@ gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'instagram'
 gem 'figaro'
+gem 'will_paginate', '~> 3.0'
 
 group :production do
   gem 'pg'
